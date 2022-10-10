@@ -1,0 +1,7 @@
+.nav-list a {
+    margin-right: 15px;
+}
+
+.nav-list a:hover {
+    color: orange;
+}
