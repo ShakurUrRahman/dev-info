@@ -1,13 +1,23 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import Option from '../Option/Option';
 
-const Quiz = () => {
-    const quizzes = useLoaderData().data.questions;
+const Quiz = ({ quiz }) => {
+    const { question, options } = quiz;
+    console.log(quiz);
+
+
     return (
-        <div>
-            {
-                quizzes.map(quiz => console.log(quiz))
-            }
+        <div className="card mx-auto w-4/6 bg-base-100 shadow-xl m-5">
+            <div className="card-body">
+                <h2 className="text-2xl font-semibold text-center">Quiz: {question}</h2>
+
+                <div className='flex gap-3'>
+                    {
+                        options.map(option => <Option
+                            option={option}
+                        ></Option>)
+                    }
+                </div>
+            </div>
         </div>
     );
 };
