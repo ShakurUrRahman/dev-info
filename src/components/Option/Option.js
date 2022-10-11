@@ -21,7 +21,7 @@ const Option = ({ option, quiz }) => {
 
     return (
         <div className='bg-[#F7E018] text-xl mt-2 border rounded-lg p-5 flex items-center'>
-            <input onClick={() => showResult()} className='mr-4' type='radio' name='quiz' id='quiz' />
+            <input onClick={() => showResult(correctAnswer)} className='mr-4' type='radio' name='quiz' id='quiz' />
             <label>{option}</label>
             <ToastContainer></ToastContainer>
         </div>
