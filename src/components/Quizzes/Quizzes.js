@@ -10,7 +10,7 @@ const Quizzes = () => {
 
     return (
         <div>
-            <h2 className='text-5xl font-bold text-[#4568ea] my-16 text-center'>Answer {name} quizzes:</h2>
+            <h2 className='text-5xl font-bold text-[#4568ea] lg:my-16 my-8 text-center'>Answer {name} quizzes:</h2>
             {
                 questions.map(quiz => <Quiz
                     key={quiz.id}

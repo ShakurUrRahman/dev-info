@@ -18,7 +18,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div>
-                        <Link to='/' className='text-4xl font-extrabold text-[#61DAFB]'>Dev <span className='text-[#F7E018]'>Info</span></Link>
+                        <Link to='/' className='lg:text-4xl text-xl font-extrabold text-[#61DAFB]'>Dev <span className='text-[#F7E018]'>Info</span></Link>
                     </div>
                 </div>
                 <div className="navbar-end nav-list hidden lg:flex">
