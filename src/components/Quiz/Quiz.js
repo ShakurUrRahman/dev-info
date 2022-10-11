@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({ quiz }) => {
     const { question, options, correctAnswer } = quiz;
-    // console.log(quiz);
+    console.log(quiz);
     const showAnswer = () => {
         toast(correctAnswer, {
             position: "top-center"

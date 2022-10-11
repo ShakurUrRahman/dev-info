@@ -4,7 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Option = ({ option, quiz }) => {
     const { correctAnswer } = quiz;
-    console.log(correctAnswer);
+    // console.log(correctAnswer);
     const showResult = () => {
         if (correctAnswer === option) {
             toast('You are correct', {
@@ -17,8 +17,6 @@ const Option = ({ option, quiz }) => {
             })
         }
     }
-
-
     return (
         <div className='bg-[#F7E018] text-xl mt-2 border rounded-lg p-5 flex items-center'>
             <input onClick={() => showResult(correctAnswer)} className='mr-4' type='radio' name='quiz' id='quiz' />

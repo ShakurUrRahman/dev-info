@@ -4,7 +4,7 @@ import Topic from '../Topic/Topic';
 
 const Home = () => {
     const topics = useLoaderData().data;
-    console.log(topics);
+    // console.log(topics);
     return (
 
         <div className="hero min-h-screen" style={{ backgroundImage: `url("dev-info.jpg")` }}>

@@ -4,6 +4,7 @@ import { ArrowRightIcon } from '@heroicons/react/24/solid'
 
 const Topic = ({ topic }) => {
     const { name, logo, total, id } = topic;
+    // console.log(topic);
     return (
         <div className="card w-96 bg-slate-600 image-full mb-5">
             <figure><img src={logo} alt="" /></figure>
@@ -14,7 +15,6 @@ const Topic = ({ topic }) => {
                     <div>
                         <button className="btn btn-ghost"><Link to={`/quiz/${id}`}>Start Quiz</Link> <ArrowRightIcon className="h-6 w-6 text-red-500" /></button>
                     </div>
-
                 </div>
             </div>
         </div>
