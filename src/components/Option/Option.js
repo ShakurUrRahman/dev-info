@@ -2,10 +2,8 @@ import React from 'react';
 
 const Option = ({ option }) => {
     return (
-        <div>
-
-            <input type="radio" value="option" />{option}
-
+        <div className='bg-[#F7E018] text-xl p-5 flex items-center'>
+            <input type="radio" value="option" for='option' id='option' />{option}
         </div>
     );
 };
