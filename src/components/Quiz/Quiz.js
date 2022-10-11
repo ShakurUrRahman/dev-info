@@ -1,19 +1,17 @@
 import Option from '../Option/Option';
 import { EyeIcon } from '@heroicons/react/24/solid'
-import { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
 const Quiz = ({ quiz }) => {
     const { question, options, correctAnswer } = quiz;
-    console.log(quiz);
+    // console.log(quiz);
     const showAnswer = () => {
         toast(correctAnswer, {
             position: "top-center"
         });
     }
-
     return (
         <div>
             <div className="card bg-slate-300 mx-auto w-4/6 shadow-xl m-5">
@@ -27,6 +25,7 @@ const Quiz = ({ quiz }) => {
                         {
                             options.map(option => <Option
                                 key={option}
+                                quiz={quiz}
                                 option={option}
                             ></Option>
                             )
