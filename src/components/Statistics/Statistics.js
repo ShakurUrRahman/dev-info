@@ -18,8 +18,6 @@ const Statistics = () => {
                     <Tooltip></Tooltip>
                 </BarChart>
             </ResponsiveContainer>
-
-
         </div>
     );
 };

@@ -1,16 +1,28 @@
 import Option from '../Option/Option';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { EyeIcon } from '@heroicons/react/24/solid'
+import { useState } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const Quiz = ({ quiz }) => {
-    const { question, options } = quiz;
+    const { question, options, correctAnswer } = quiz;
+    console.log(quiz);
+    const showAnswer = () => {
+        toast(correctAnswer, {
+            position: "top-center"
+        });
+    }
 
     return (
         <div>
             <div className="card bg-slate-300 mx-auto w-4/6 shadow-xl m-5">
                 <div className="card-body bg-[#61DAFB]">
-                    <h2 className="text-xl font-semibold p-5">Quiz: {question}</h2>
-                    <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>
+                    <div className='flex justify-between'>
+                        <h2 className="text-xl font-semibold">Quiz: {question}</h2>
+                        <EyeIcon onClick={() => showAnswer(correctAnswer)} className="h-6 w-6 text-blue-500" />
+                        <ToastContainer></ToastContainer>
+                    </div>
                     <form className='lg:grid grid-cols-2 lg:gap-2 text-xl p-5'>
                         {
                             options.map(option => <Option
@@ -20,9 +32,11 @@ const Quiz = ({ quiz }) => {
                             )
                         }
                     </form>
+
                 </div>
             </div>
-        </div>
+
+        </div >
     );
 };
 
