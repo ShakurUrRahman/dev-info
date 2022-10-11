@@ -1,11 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import { createRouter } from '@remix-run/router';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import Navbar from './components/Navbar/Navbar';
 import Home from './components/Home/Home';
 import Main from './layout/Main';
-import Quiz from './components/Quizzes/Quizzes';
 import Quizzes from './components/Quizzes/Quizzes';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
