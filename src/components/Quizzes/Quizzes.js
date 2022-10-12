@@ -12,7 +12,7 @@ const Quizzes = () => {
             <h2 className='text-5xl font-bold text-[#4568ea] lg:my-16 my-8 text-center'>Answer {name} quizzes:</h2>
             {
                 questions.map((quiz, index) => <Quiz
-                    key={quiz.id}
+                    key={index}
                     quiz={quiz}
                     index={index}
                 ></Quiz>)

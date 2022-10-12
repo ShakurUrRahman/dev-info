@@ -8,3 +8,7 @@
 .nav-list a:hover {
     color: #61DAFB;
 }
+
+.activeStyle {
+    color: brown;
+}

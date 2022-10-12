@@ -6,7 +6,6 @@ const Home = () => {
     const topics = useLoaderData().data;
     // console.log(topics);
     return (
-
         <div className="hero min-h-screen" style={{ backgroundImage: `url("dev-info.jpg")` }}>
             <div className="hero-overlay bg-opacity-5"></div>
             <div className="hero-content text-center text-neutral-content">

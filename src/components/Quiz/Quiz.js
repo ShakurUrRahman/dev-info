@@ -12,10 +12,14 @@ const Quiz = ({ quiz, index }) => {
     }
     return (
         <div>
-            <div className="card bg-slate-300 lg:mx-auto mx-2 lg:w-4/6 shadow-xl lg:mb-5 mb-2 shadow-xl">
+            <div className="card bg-slate-300 lg:mx-auto mx-2 lg:w-4/6 lg:mb-5 mb-2 shadow-xl">
                 <div className="card-body bg-[#61DAFB]">
-                    <div className='text-center'>
-                        <h2 className="text-xl font-semibold">{index + 1}. {question.replace(/(<([^>]+)>)/ig, '')}</h2>
+                    <div className='text-center text-xl font-semibold flex justify-center gap-2'>
+                        <div>
+                            {index + 1}
+                        </div>
+                        <div dangerouslySetInnerHTML={{ __html: question }}>
+                        </div>
                         <EyeIcon onClick={() => showAnswer(correctAnswer)} className="h-6 w-6 mx-auto mt-2 text-blue-500" />
                     </div>
                     <form className='lg:grid grid-cols-2 lg:gap-2 text-xl p-5'>
