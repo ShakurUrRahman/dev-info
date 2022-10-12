@@ -1,10 +1,8 @@
 import Option from '../Option/Option';
 import { EyeIcon } from '@heroicons/react/24/solid'
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
 
-
-const Quiz = ({ quiz }) => {
+const Quiz = ({ quiz, index }) => {
     const { question, options, correctAnswer } = quiz;
     console.log(quiz);
     const showAnswer = () => {
@@ -14,12 +12,11 @@ const Quiz = ({ quiz }) => {
     }
     return (
         <div>
-            <div className="card bg-slate-300 lg:mx-auto mx-2 lg:w-4/6 shadow-xl lg:mb-5 mb-2">
+            <div className="card bg-slate-300 lg:mx-auto mx-2 lg:w-4/6 shadow-xl lg:mb-5 mb-2 shadow-xl">
                 <div className="card-body bg-[#61DAFB]">
                     <div className='text-center'>
-                        <h2 className="text-xl font-semibold">{question.replace(/(<([^>]+)>)/ig, '')}</h2>
+                        <h2 className="text-xl font-semibold">{index + 1}. {question.replace(/(<([^>]+)>)/ig, '')}</h2>
                         <EyeIcon onClick={() => showAnswer(correctAnswer)} className="h-6 w-6 mx-auto mt-2 text-blue-500" />
-                        <ToastContainer></ToastContainer>
                     </div>
                     <form className='lg:grid grid-cols-2 lg:gap-2 text-xl p-5'>
                         {
