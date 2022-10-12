@@ -13,7 +13,7 @@ const Topic = ({ topic }) => {
                 <p className='font-bold text-black'>Quiz count: <span className='text-white'>{total}</span></p>
                 <div className="card-actions justify-end">
                     <div>
-                        <button className="btn btn-ghost"><Link to={`/quiz/${id}`}>Start Quiz</Link> <ArrowRightIcon className="h-6 w-6 text-red-500" /></button>
+                        <button className="btn btn-ghost"><Link to={`/quiz/${id}`}>Start Quiz</Link> <ArrowRightIcon className="h-6 w-6 ml-2 text-red-500" /></button>
                     </div>
                 </div>
             </div>
