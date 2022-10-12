@@ -7,9 +7,9 @@ const Option = ({ option, quiz }) => {
     // console.log(correctAnswer);
     const showResult = () => {
         correctAnswer === option ? toast.success('You are correct', {
-            position: "top-center"
+            position: "top-center", toastId: "option"
         }) : toast.error('You are wrong', {
-            position: "top-center"
+            position: "top-center", toastId: "option"
         })
     }
     return (
