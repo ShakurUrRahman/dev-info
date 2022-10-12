@@ -6,7 +6,6 @@ const Quizzes = () => {
     const quizzes = useLoaderData();
     const { data } = quizzes;
     const { questions, name } = data;
-    console.log(data);
 
     return (
         <div>

@@ -6,20 +6,15 @@ const Option = ({ option, quiz }) => {
     const { correctAnswer } = quiz;
     // console.log(correctAnswer);
     const showResult = () => {
-        if (correctAnswer === option) {
-            toast('You are correct', {
-                position: "top-center"
-            })
-        }
-        else {
-            toast('You are wrong', {
-                position: "top-center"
-            })
-        }
+        correctAnswer === option ? toast.success('You are correct', {
+            position: "top-center"
+        }) : toast.error('You are wrong', {
+            position: "top-center"
+        })
     }
     return (
         <div className='bg-[#F7E018] lg:text-xl text-sm mt-2 border rounded-lg lg:p-5 p-2 flex items-center'>
-            <input onClick={() => showResult(correctAnswer)} className='mr-4' type='radio' name='quiz' id='quiz' />
+            <input onClick={() => showResult()} className='mr-4' type='radio' name='quiz' id='quiz' />
             <label>{option}</label>
             <ToastContainer></ToastContainer>
         </div>

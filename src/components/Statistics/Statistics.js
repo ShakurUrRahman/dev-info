@@ -12,9 +12,9 @@ const Statistics = () => {
             <ResponsiveContainer width="100%" height={400}>
                 <BarChart width={500} height={400} data={statistics}>
                     <Bar dataKey="total" fill="#61DAFB" />
-                    <XAxis dataKey="total">
+                    <XAxis dataKey="name">
                     </XAxis>
-                    <YAxis></YAxis>
+                    <YAxis dataKey="total"></YAxis>
                     <Tooltip></Tooltip>
                 </BarChart>
             </ResponsiveContainer>

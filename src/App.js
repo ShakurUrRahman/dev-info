@@ -5,12 +5,14 @@ import Main from './layout/Main';
 import Quizzes from './components/Quizzes/Quizzes';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
+import ErrorPage from './components/errorPage/ErrorPage';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
           path: '/',
@@ -32,10 +34,6 @@ function App() {
           element: <Blog></Blog>
         }
       ]
-    },
-    {
-      path: '*',
-      element: <h1>Page not found: 404</h1>
     }
   ])
   return (
