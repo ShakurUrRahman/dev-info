@@ -15,11 +15,10 @@ const ErrorPage = () => {
                     <div>
                         <p className='text-red-500'>{error.statusText || error.message}</p>
                         <p>{error.status}</p>
-
                     </div>
                 )}
             </div>
-        </div >
+        </div>
     );
 };
 

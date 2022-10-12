@@ -14,9 +14,9 @@ const Quiz = ({ quiz, index }) => {
         <div>
             <div className="card bg-slate-300 lg:mx-auto mx-2 lg:w-4/6 lg:mb-5 mb-2 shadow-xl">
                 <div className="card-body bg-[#61DAFB]">
-                    <div className='text-center text-xl font-semibold flex justify-center gap-2'>
+                    <div className='text-center text-xl font-semibold flex justify-center gap-1'>
                         <div>
-                            {index + 1}
+                            {index + 1}.
                         </div>
                         <div dangerouslySetInnerHTML={{ __html: question }}>
                         </div>
@@ -32,10 +32,8 @@ const Quiz = ({ quiz, index }) => {
                             )
                         }
                     </form>
-
                 </div>
             </div>
-
         </div >
     );
 };
